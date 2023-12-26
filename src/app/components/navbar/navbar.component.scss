@@ -1,13 +1,10 @@
-mat-toolbar{
+mat-toolbar {
   background-color: black;
   color: white;
   justify-content: space-between;
   align-items: center;
 
-  .logo{
-  }
-
-  .bookmarks{
+  .bookmarks {
     display: flex;
     gap: 10px;
   }
