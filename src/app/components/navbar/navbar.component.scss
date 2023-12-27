@@ -1,6 +1,8 @@
+@import "../../../styles/variables";
+
 mat-toolbar {
-  background-color: black;
-  color: white;
+  background-color: $background-color-black-theme;
+  color: $text-color-black-theme;
   justify-content: space-between;
   align-items: center;
 
@@ -16,6 +18,6 @@ mat-toolbar {
 
   .bookmarks span:hover {
     text-decoration: underline;
-    color: #26e826;
+    color: $text-color-hover-black-theme;
   }
 }
