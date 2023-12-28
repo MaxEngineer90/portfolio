@@ -1,87 +1,83 @@
 @import "../../../styles/variables";
 
 .about-me-container {
+  margin-top: 0.5rem;
   background-color: $background-color-black-theme;
   color: $text-color-black-theme;
-}
 
-.left-col {
-  .mat-grid-tile-content,
-  .greeting,
-  .history {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .greeting {
-    font-size: 2rem;
-  }
-
-  .history {
-    font-size: 1.2rem;
-  }
-
-  .mat-grid-tile-content {
-    width: 100%;
-    margin-top: 0.5rem;
-    margin-left: 1rem;
-    align-items: flex-start;
-    justify-content: center;
+  .left-col {
+    .mat-grid-tile-content,
+    .history {
+      display: flex;
+      flex-direction: column;
+    }
 
     .history {
-      margin-top: 1rem;
+      font-size: 1.2rem;
     }
 
-    .social-container {
-      display: flex;
-      gap: 20px;
-      justify-content: end;
+    .mat-grid-tile-content {
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-left: 1rem;
+      align-items: flex-start;
+      justify-content: center;
 
-      a {
-        color: $text-color-hover-black-theme;
-        text-decoration: none;
+      .history {
+        margin-top: 1rem;
+      }
 
-        img {
-          width: 30px;
-          height: auto;
+      .social-container {
+        display: flex;
+        gap: 20px;
+        justify-content: end;
+
+        a {
+          color: $text-color-hover-black-theme;
+          text-decoration: none;
+
+          img {
+            width: 30px;
+            height: auto;
+          }
+        }
+
+        button {
+          height: 31px;
+          width: 31px;
+          background-color: $text-color-hover-black-theme;
+        }
+
+        .btn-tooltip {
+          font-size: 5px;
+          background-color: green;
         }
       }
-
-      button {
-        height: 31px;
-        width: 31px;
-        background-color: $text-color-hover-black-theme;
-      }
-
-      .btn-tooltip {
-        font-size: 5px;
-        background-color: green;
-      }
     }
   }
-}
 
-.extra-small {
-  height: 20%;
-}
-
-.image {
-  height: auto;
-}
-
-.techstack-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2rem;
-  gap: 10px;
-
-  .tech-stack-title,
-  app-tech-stack-collection {
-    align-self: center;
+  .extra-small {
+    height: 20%;
   }
 
-  .tech-stack-title {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+  .image {
+    height: auto;
+  }
+
+  .techstack-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 10px;
+
+    .tech-stack-title,
+    app-tech-stack-collection {
+      align-self: center;
+    }
+
+    .tech-stack-title {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
   }
 }

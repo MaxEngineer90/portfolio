@@ -18,6 +18,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { GreetingComponent } from './greeting/greeting.component';
 
 @Component({
   selector: 'app-about-me',
@@ -32,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatTooltipModule,
     MatIconModule,
+    GreetingComponent,
   ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
