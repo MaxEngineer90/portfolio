@@ -10,28 +10,33 @@ import { TechStackEntry } from '../../../models/tech-stack-entry';
   styleUrl: './tech-stack-collection.component.scss',
 })
 export class TechStackCollectionComponent {
-  readonly backendTechStackEntries: TechStackEntry[] = [
-    { name: 'Java', icon: '' },
-    { name: 'Spring Boot', icon: '' },
-    { name: 'SQL', icon: '' },
-    { name: 'Junit 5', icon: '' },
-    { name: 'Mockito', icon: '' },
-  ];
+  readonly path = 'assets/icons/';
+  readonly fileType = '.png';
 
   readonly frontEndTechStackEntries: TechStackEntry[] = [
-    { name: 'Angular 17', icon: '' },
-    { name: 'Typescript', icon: '' },
-    { name: 'Html', icon: '' },
-    { name: 'Scss', icon: '' },
+    { name: 'Angular 17', icon: `${this.path}angular${this.fileType}` },
+    { name: 'Typescript', icon: `${this.path}typescript${this.fileType}` },
+    { name: 'Html', icon: `${this.path}html${this.fileType}` },
+    { name: 'Scss', icon: `${this.path}css${this.fileType}` },
   ];
-
   readonly devOpsTechStackEntries: TechStackEntry[] = [
-    { name: 'GitHub actions', icon: '' },
+    {
+      name: 'GitHub actions',
+      icon: `${this.path}github-mark-white${this.fileType}`,
+    },
     {
       name: 'Docker',
-      icon: '',
+      icon: `${this.path}docker${this.fileType}`,
     },
-    { name: 'Kubernetes', icon: '' },
-    { name: 'Keycloak', icon: '' },
+    { name: 'Kubernetes', icon: `${this.path}kubernetes${this.fileType}` },
+    { name: 'Keycloak', icon: `${this.path}keyclaok${this.fileType}` },
+  ];
+
+  readonly backendTechStackEntries: TechStackEntry[] = [
+    { name: 'Java', icon: `${this.path}java${this.fileType}` },
+    { name: 'Spring Boot', icon: `${this.path}springboot${this.fileType}` },
+    { name: 'Postgres SQL', icon: `${this.path}postgres${this.fileType}` },
+    { name: 'Junit 5', icon: `${this.path}junit5${this.fileType}` },
+    { name: 'Mockito', icon: `${this.path}mockito${this.fileType}` },
   ];
 }
