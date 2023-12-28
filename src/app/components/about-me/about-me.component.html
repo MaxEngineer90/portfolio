@@ -1,51 +1,55 @@
-<mat-grid-list cols="4" rowHeight="300px">
-  <mat-grid-tile [colspan]="3" [rowspan]="" class="left-col">
-    <div class="greeting">
-      <span class="first-line">Hey ich bin Maximilian Lamm</span>
-      <span class="second-line"
-        >Und ein Java, Spring Boot & Angular Enthusiast</span
-      >
-    </div>
-    <div class="history">
-      <span>
-        2019 hatte ich meine Umschulung zum Fachinformatiker
-        Anwendungsenticklung abgeschlosen.
-      </span>
-      <span>
-        Seit her konnte ich mein Wissen in verschiedenen Unternehmen und
-        branchen vertiefen.
-      </span>
-      <br />
-    </div>
-    <div class="social-container">
-      <a href="https://www.linkedin.com/feed/"
-        ><img alt="linkedin icon" src="assets/icons/linkedIn.png"
-      /></a>
-      <a href="https://github.com/MaxEngineer90"
-        ><img alt="github icon" src="assets/icons/github-mark-white.png"
-      /></a>
-      <div style="margin-bottom: 5px; display: block">
-        <button
-          mat-mini-fab
-          matTooltip="Download meinen Lebenslauf"
-          matTooltipPosition="right"
+<div class="about-me-container">
+  <mat-grid-list cols="4" rowHeight="300px">
+    <mat-grid-tile [colspan]="3" [rowspan]="" class="left-col">
+      <div class="greeting">
+        <span class="first-line">Hey ich bin Maximilian Lamm</span>
+        <span class="second-line"
+          >Und ein Java, Spring Boot & Angular Enthusiast</span
         >
-          <mat-icon>download</mat-icon>
-        </button>
       </div>
-    </div>
-  </mat-grid-tile>
-  <mat-grid-tile
-    *ngIf="currentBreakpoint !== BreakpointEnum.XSmall"
-    class="image"
-  >
-    <img
-      alt="bild von einem softwareentwickler"
-      src="assets/images/max-placeholder.png"
-    />
-  </mat-grid-tile>
-</mat-grid-list>
-<div class="techstack-container">
-  <span class="tech-stack-title"> Mein Techstack </span>
-  <app-tech-stack-collection />
+      <div class="history">
+        <span>
+          2019 hatte ich meine Umschulung zum Fachinformatiker
+          Anwendungsenticklung abgeschlosen.
+        </span>
+        <span>
+          Seit her konnte ich mein Wissen in verschiedenen Unternehmen und
+          branchen vertiefen.
+        </span>
+        <br />
+      </div>
+
+      <div class="social-container">
+        <a href="https://www.linkedin.com/feed/"
+          ><img alt="linkedin icon" src="assets/icons/linkedIn.png"
+        /></a>
+        <a href="https://github.com/MaxEngineer90"
+          ><img alt="github icon" src="assets/icons/github-mark-white.png"
+        /></a>
+        <div style="margin-bottom: 5px; display: block">
+          <button
+            mat-mini-fab
+            matTooltip="Download meinen Lebenslauf"
+            matTooltipClass="btn-tooltip"
+            matTooltipPosition="right"
+          >
+            <mat-icon>download</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile
+      *ngIf="currentBreakpoint !== BreakpointEnum.XSmall"
+      class="image"
+    >
+      <img
+        alt="bild von einem softwareentwickler"
+        src="assets/images/max-placeholder.png"
+      />
+    </mat-grid-tile>
+  </mat-grid-list>
+  <div class="techstack-container">
+    <span class="tech-stack-title"> Mein Techstack </span>
+    <app-tech-stack-collection />
+  </div>
 </div>

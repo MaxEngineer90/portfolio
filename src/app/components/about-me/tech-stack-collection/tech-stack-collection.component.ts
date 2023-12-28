@@ -13,6 +13,7 @@ export class TechStackCollectionComponent {
   readonly backendTechStackEntries: TechStackEntry[] = [
     { name: 'Java', icon: '' },
     { name: 'Spring Boot', icon: '' },
+    { name: 'SQL', icon: '' },
     { name: 'Junit 5', icon: '' },
     { name: 'Mockito', icon: '' },
   ];

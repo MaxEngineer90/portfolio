@@ -1,5 +1,15 @@
+@import "../../../../../styles/variables";
+
 mat-card {
+  height: 300px;
   width: 180px;
+  box-sizing: border-box;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 1);
+  background-color: $background-color-black-theme;
 
   mat-card-header,
   mat-card-content {
@@ -12,5 +22,9 @@ mat-card {
 
   mat-card-content {
     font-size: 0.9rem;
+
+    .mat-list-item {
+      color: $text-color-black-theme;
+    }
   }
 }

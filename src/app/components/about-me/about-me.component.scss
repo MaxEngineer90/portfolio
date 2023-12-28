@@ -1,14 +1,24 @@
 @import "../../../styles/variables";
 
-.left-col {
+.about-me-container {
   background-color: $background-color-black-theme;
-  color: $text-color-hover-black-theme;
+  color: $text-color-black-theme;
+}
 
+.left-col {
   .mat-grid-tile-content,
   .greeting,
   .history {
     display: flex;
     flex-direction: column;
+  }
+
+  .greeting {
+    font-size: 2rem;
+  }
+
+  .history {
+    font-size: 1.2rem;
   }
 
   .mat-grid-tile-content {
@@ -40,6 +50,11 @@
       button {
         height: 31px;
         width: 31px;
+        background-color: $text-color-hover-black-theme;
+      }
+
+      .btn-tooltip {
+        font-size: 5px;
         background-color: green;
       }
     }
