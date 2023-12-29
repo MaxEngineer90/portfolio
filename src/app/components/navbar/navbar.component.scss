@@ -1,6 +1,7 @@
 @import "../../../styles/variables";
 
 mat-toolbar {
+  display: flex;
   background-color: $background-color-black-theme;
   color: $text-color-black-theme;
   justify-content: space-between;
@@ -9,11 +10,14 @@ mat-toolbar {
   .bookmarks {
     display: flex;
     gap: 10px;
+    margin-left: auto;
   }
 
   .bookmarks span {
     cursor: pointer;
-    transition: color 0.3s, text-decoration 0.3s;
+    transition:
+      color 0.3s,
+      text-decoration 0.3s;
   }
 
   .bookmarks span:hover {
