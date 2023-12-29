@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { NgForOf } from '@angular/common';
-import { TechStackEntry } from '../../../../models/tech-stack-entry';
+import { IconSource } from '../../../../models/icon-source';
 import { EntryComponent } from './entry/entry.component';
 
 @Component({
@@ -14,5 +14,5 @@ import { EntryComponent } from './entry/entry.component';
 })
 export class TechStackCardComponent {
   @Input({ required: true }) title: string = '';
-  @Input({ required: true }) entries!: TechStackEntry[];
+  @Input({ required: true }) entries!: IconSource[];
 }

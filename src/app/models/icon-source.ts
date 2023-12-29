@@ -1,4 +1,4 @@
-export interface TechStackEntry {
+export interface IconSource {
   name: string;
   icon: string;
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TechStackCardComponent } from './tech-stack-card/tech-stack-card.component';
-import { TechStackEntry } from '../../../models/tech-stack-entry';
+import { IconSource } from '../../../models/icon-source';
 
 @Component({
   selector: 'app-tech-stack-collection',
@@ -13,13 +13,13 @@ export class TechStackCollectionComponent {
   readonly path = 'assets/icons/';
   readonly fileType = '.png';
 
-  readonly frontEndTechStackEntries: TechStackEntry[] = [
+  readonly frontEndTechStackEntries: IconSource[] = [
     { name: 'Angular 17', icon: `${this.path}angular${this.fileType}` },
     { name: 'Typescript', icon: `${this.path}typescript${this.fileType}` },
     { name: 'Html', icon: `${this.path}html${this.fileType}` },
     { name: 'Scss', icon: `${this.path}css${this.fileType}` },
   ];
-  readonly devOpsTechStackEntries: TechStackEntry[] = [
+  readonly devOpsTechStackEntries: IconSource[] = [
     {
       name: 'GitHub actions',
       icon: `${this.path}github-mark-white${this.fileType}`,
@@ -32,7 +32,7 @@ export class TechStackCollectionComponent {
     { name: 'Keycloak', icon: `${this.path}keyclaok${this.fileType}` },
   ];
 
-  readonly backendTechStackEntries: TechStackEntry[] = [
+  readonly backendTechStackEntries: IconSource[] = [
     { name: 'Java', icon: `${this.path}java${this.fileType}` },
     { name: 'Spring Boot', icon: `${this.path}springboot${this.fileType}` },
     { name: 'Postgres SQL', icon: `${this.path}postgres${this.fileType}` },

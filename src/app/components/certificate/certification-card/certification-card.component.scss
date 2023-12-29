@@ -1,0 +1,17 @@
+@import "../../../../styles/mixins";
+
+mat-card {
+  @include mat-card-style;
+  display: flex;
+
+  mat-card-subtitle {
+    margin-top: 0.5rem;
+    text-align: center;
+    color: $text-color-black-theme;
+  }
+
+  img {
+    height: 200px;
+    width: 150px;
+  }
+}

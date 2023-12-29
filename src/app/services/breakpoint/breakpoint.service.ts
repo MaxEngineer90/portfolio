@@ -1,15 +1,20 @@
-import {inject, Injectable} from '@angular/core';
-import {BreakpointEnum} from "../models/breakpoint.enum";
-import {BreakpointObserver, Breakpoints, BreakpointState} from "@angular/cdk/layout";
-import {BehaviorSubject} from "rxjs";
+import { inject, Injectable } from '@angular/core';
+import { BreakpointEnum } from '../../models/breakpoint.enum';
+import {
+  BreakpointObserver,
+  Breakpoints,
+  BreakpointState,
+} from '@angular/cdk/layout';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BreakpointService {
-
   private breakpointObserver = inject(BreakpointObserver);
-  private activeBreakpoint = new BehaviorSubject<BreakpointEnum>(BreakpointEnum.XSmall);
+  private activeBreakpoint = new BehaviorSubject<BreakpointEnum>(
+    BreakpointEnum.XSmall,
+  );
 
   activeBreakpoint$ = this.activeBreakpoint.asObservable();
 
@@ -24,7 +29,7 @@ export class BreakpointService {
         Breakpoints.Small,
         Breakpoints.Medium,
         Breakpoints.Large,
-        Breakpoints.XLarge
+        Breakpoints.XLarge,
       ])
       .subscribe((result: BreakpointState) => {
         for (const query of Object.keys(result.breakpoints)) {

@@ -49,6 +49,10 @@ export class GreetingComponent implements OnInit {
       typeSpeed = 500; // Pause vor dem Start
     }
 
-    requestAnimationFrame(() => setTimeout(() => this.typewrite(), typeSpeed));
+    if (typeof window !== 'undefined') {
+      requestAnimationFrame(() =>
+        setTimeout(() => this.typewrite(), typeSpeed),
+      );
+    }
   }
 }

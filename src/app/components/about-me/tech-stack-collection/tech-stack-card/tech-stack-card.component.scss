@@ -1,15 +1,7 @@
-@import "../../../../../styles/variables";
+@import "../../../../../styles/mixins";
 
 mat-card {
-  height: 270px;
-  width: 180px;
-  box-sizing: border-box;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  border-radius: 8px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 1);
-  background-color: $background-color-black-theme;
+  @include mat-card-style;
 
   mat-card-header,
   mat-card-content {

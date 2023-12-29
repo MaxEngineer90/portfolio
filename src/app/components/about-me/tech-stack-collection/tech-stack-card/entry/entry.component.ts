@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TechStackEntry } from '../../../../../models/tech-stack-entry';
+import { IconSource } from '../../../../../models/icon-source';
 
 @Component({
   selector: 'app-entry',
@@ -9,5 +9,5 @@ import { TechStackEntry } from '../../../../../models/tech-stack-entry';
   styleUrl: './entry.component.scss',
 })
 export class EntryComponent {
-  @Input({ required: true }) entry!: TechStackEntry;
+  @Input({ required: true }) entry!: IconSource;
 }

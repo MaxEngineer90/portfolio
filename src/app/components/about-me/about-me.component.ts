@@ -5,7 +5,7 @@ import {
   OnInit,
   ViewEncapsulation,
 } from '@angular/core';
-import { BreakpointService } from '../../services/breakpoint.service';
+import { BreakpointService } from '../../services/breakpoint/breakpoint.service';
 import { Subscription } from 'rxjs';
 import { BreakpointEnum } from '../../models/breakpoint.enum';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -19,6 +19,7 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { GreetingComponent } from './greeting/greeting.component';
+import { CertificateComponent } from '../certificate/certificate.component';
 
 @Component({
   selector: 'app-about-me',
@@ -34,6 +35,7 @@ import { GreetingComponent } from './greeting/greeting.component';
     MatTooltipModule,
     MatIconModule,
     GreetingComponent,
+    CertificateComponent,
   ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
