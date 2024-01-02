@@ -1,9 +1,42 @@
-.greeting {
+.greeting,
+.history-social-container {
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+}
+
+.greeting-medium {
+  font-size: 1.8rem;
 
   .second-line {
-    font-size: 1.5rem;
+    font-size: 18px;
+  }
+}
+
+.greeting-xsmall {
+  margin-top: 1.2rem;
+  font-size: 16px;
+
+  .second-line {
+    font-size: 12px;
+  }
+}
+
+.history-social-container {
+  .history {
+    margin-top: 1rem;
+  }
+
+  .social-container {
+    display: flex;
+    gap: 20px;
+    align-self: flex-start;
+    margin-top: 1rem;
+
+    img {
+      height: 1.5rem;
+      width: auto;
+    }
   }
 }

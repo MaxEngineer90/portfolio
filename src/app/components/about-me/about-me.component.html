@@ -1,38 +1,12 @@
 <div class="about-me-container">
-  <mat-grid-list cols="4" rowHeight="300px">
-    <mat-grid-tile [colspan]="3" [rowspan]="" class="left-col">
-      <app-greeting />
-      <div class="history">
-        <span>
-          Im Jahr 2019 schloss ich erfolgreich meine Umschulung zum
-          Fachinformatiker für Anwendungsentwicklung ab.
-        </span>
-        <span>
-          Seitdem habe ich die Gelegenheit genutzt, meine Kenntnisse und
-          Fähigkeiten zu vertiefen.
-        </span>
-        <br />
-      </div>
+  <div class="greeting-image-container">
+    <app-greeting />
+    <img
+      alt="bild von einem softwareentwickler"
+      src="assets/images/max-placeholder.png"
+    />
+  </div>
 
-      <div class="social-container">
-        <a href="https://www.linkedin.com/feed/"
-          ><img alt="linkedin icon" src="assets/icons/linkedIn.png"
-        /></a>
-        <a href="https://github.com/MaxEngineer90"
-          ><img alt="github icon" src="assets/icons/github-mark-white.png"
-        /></a>
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile
-      *ngIf="currentBreakpoint !== BreakpointEnum.XSmall"
-      class="image"
-    >
-      <img
-        alt="bild von einem softwareentwickler"
-        src="assets/images/max-placeholder.png"
-      />
-    </mat-grid-tile>
-  </mat-grid-list>
   <div class="techstack-container">
     <span class="tech-stack-title"> Mein Techstack </span>
     <app-tech-stack-collection />

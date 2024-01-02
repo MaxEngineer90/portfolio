@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { BreakpointService } from '../../../services/breakpoint/breakpoint.service';
+import { BreakpointEnum } from '../../../models/breakpoint.enum';
 
 @Component({
   selector: 'app-greeting',
@@ -7,19 +10,36 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './greeting.component.html',
   styleUrl: './greeting.component.scss',
 })
-export class GreetingComponent implements OnInit {
-  words: string[] = [
+export class GreetingComponent implements OnInit, OnDestroy {
+  displayText = '';
+  currentBreakpoint?: BreakpointEnum;
+  protected readonly breakpointEnum = BreakpointEnum;
+  private readonly words: string[] = [
     'Und ein Java, Spring Boot & Angular Enthusiast',
     'Und ein Java Angular Fullstack Entwickler',
   ];
-  displayText = '';
+  private readonly maxLoops = 5;
   private isDeleting = false;
   private loopNum = 0;
   private typingSpeed = 100;
-  private maxLoops = 5;
+
+  private subscription?: Subscription;
+  private readonly breakpointService = inject(BreakpointService);
+
+  constructor() {
+    this.subscription = this.breakpointService.activeBreakpoint$.subscribe(
+      (breakpoint) => {
+        this.currentBreakpoint = breakpoint;
+      },
+    );
+  }
 
   ngOnInit(): void {
     this.typewrite();
+  }
+
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
   }
 
   private typewrite(): void {
