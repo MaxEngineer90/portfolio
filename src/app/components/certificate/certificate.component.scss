@@ -3,8 +3,8 @@
 :host {
   display: flex;
   flex-direction: column;
-  height: 45%;
-  margin-top: 0.5rem;
+  height: 80%;
+  padding-left: 1rem;
   background-color: $background-color-black-theme;
   color: $text-color-black-theme;
   align-items: center;
@@ -15,8 +15,10 @@
     margin-top: 0.5rem;
   }
 
-  app-certification-card {
+  .certification-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+    justify-content: flex-start;
   }
 }

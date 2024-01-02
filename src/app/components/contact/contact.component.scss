@@ -1,0 +1,6 @@
+@import "../../../styles/mixins";
+
+.divider {
+  @include divider;
+  margin-bottom: 1rem;
+}

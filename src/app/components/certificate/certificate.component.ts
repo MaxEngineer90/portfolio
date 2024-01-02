@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CertificationCardComponent } from './certification-card/certification-card.component';
 import { NgForOf } from '@angular/common';
 import { IconSource } from '../../models/icon-source';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-certificate',
   standalone: true,
-  imports: [CertificationCardComponent, NgForOf],
+  imports: [CertificationCardComponent, NgForOf, MatListModule],
   templateUrl: './certificate.component.html',
   styleUrl: './certificate.component.scss',
 })

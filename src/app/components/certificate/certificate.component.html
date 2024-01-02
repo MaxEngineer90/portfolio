@@ -1,5 +1,5 @@
 <span class="title">Zertifikate</span>
 
-<ng-container *ngFor="let source of sources">
-  <app-certification-card [source]="source" />
-</ng-container>
+<div class="certification-container">
+  <app-certification-card *ngFor="let source of sources" [source]="source" />
+</div>
