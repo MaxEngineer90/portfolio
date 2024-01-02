@@ -15,8 +15,8 @@ export class GreetingComponent implements OnInit, OnDestroy {
   currentBreakpoint?: BreakpointEnum;
   protected readonly breakpointEnum = BreakpointEnum;
   private readonly words: string[] = [
-    'Und ein Java, Spring Boot & Angular Enthusiast',
-    'Und ein Java Angular Fullstack Entwickler',
+    ' Java, Spring Boot & Angular Enthusiast',
+    ' Java Angular Fullstack Entwickler',
   ];
   private readonly maxLoops = 5;
   private isDeleting = false;
