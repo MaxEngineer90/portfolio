@@ -1,7 +1,6 @@
-@import "../../../styles/variables";
+@import "../../../styles/mixins";
 
 .about-me-container {
-  margin-top: 0.5rem;
   background-color: $background-color-black-theme;
   color: $text-color-black-theme;
 
@@ -80,10 +79,9 @@
       margin-bottom: 0.5rem;
     }
   }
+}
 
-  app-certificate {
-    display: flex;
-    align-self: center;
-    width: 100%;
-  }
+.divider {
+  @include divider;
+  margin-top: 1rem;
 }

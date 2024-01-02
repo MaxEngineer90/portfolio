@@ -15,7 +15,7 @@ export class GreetingComponent implements OnInit {
   displayText = '';
   private isDeleting = false;
   private loopNum = 0;
-  private typingSpeed = 90;
+  private typingSpeed = 100;
   private maxLoops = 5;
 
   ngOnInit(): void {
@@ -23,10 +23,10 @@ export class GreetingComponent implements OnInit {
   }
 
   private typewrite(): void {
-    // Überprüfen, ob die maximale Anzahl von Durchläufen erreicht ist
+    // Check if the maximum number of loops has been reached
     if (this.loopNum >= this.maxLoops) {
-      this.displayText = this.words[0]; // Ersten String anzeigen
-      return; // Beendet die Methode, um weitere Animationen zu verhindern
+      this.displayText = this.words[0];
+      return;
     }
 
     const current = this.loopNum % this.words.length;
@@ -41,12 +41,12 @@ export class GreetingComponent implements OnInit {
     let typeSpeed = this.isDeleting ? this.typingSpeed / 2 : this.typingSpeed;
 
     if (!this.isDeleting && this.displayText === fullTxt) {
-      typeSpeed = 500; // Pause am Ende
+      typeSpeed = 1500; // break at the end
       this.isDeleting = true;
     } else if (this.isDeleting && this.displayText === '') {
       this.isDeleting = false;
       this.loopNum++;
-      typeSpeed = 500; // Pause vor dem Start
+      typeSpeed = 500; // break before starting
     }
 
     if (typeof window !== 'undefined') {
