@@ -1,7 +1,25 @@
 <mat-toolbar>
   <div class="bookmarks">
-    <span routerLink="/about-me" routerLinkActive="active">About Me</span>
-    <span routerLink="/contact" routerLinkActive="active">Contact</span>
+    <span
+      [class.font-size-h2-lg]="currentBreakpoint === breakpointEnum.Large"
+      [class.font-size-h2-md]="currentBreakpoint === breakpointEnum.Medium"
+      [class.font-size-h2-sm]="currentBreakpoint === breakpointEnum.Small"
+      [class.font-size-h2-xl]="currentBreakpoint === breakpointEnum.XLarge"
+      [class.font-size-h2-xs]="currentBreakpoint === breakpointEnum.XSmall"
+      routerLink="/about-me"
+      routerLinkActive="active"
+      >about</span
+    >
+    <span
+      [class.font-size-h2-lg]="currentBreakpoint === breakpointEnum.Large"
+      [class.font-size-h2-md]="currentBreakpoint === breakpointEnum.Medium"
+      [class.font-size-h2-sm]="currentBreakpoint === breakpointEnum.Small"
+      [class.font-size-h2-xl]="currentBreakpoint === breakpointEnum.XLarge"
+      [class.font-size-h2-xs]="currentBreakpoint === breakpointEnum.XSmall"
+      routerLink="/contact"
+      routerLinkActive="active"
+      >contact</span
+    >
   </div>
 </mat-toolbar>
 <div class="divider"></div>

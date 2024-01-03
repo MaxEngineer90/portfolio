@@ -4,6 +4,8 @@ import { MatListModule } from '@angular/material/list';
 import { NgForOf } from '@angular/common';
 import { IconSource } from '../../../../models/icon-source';
 import { EntryComponent } from './entry/entry.component';
+import { BreakpointComponent } from '../../../breakpoint/breakpoint.component';
+import { BreakpointEnum } from '../../../../models/breakpoint.enum';
 
 @Component({
   selector: 'app-tech-stack-card',
@@ -12,7 +14,12 @@ import { EntryComponent } from './entry/entry.component';
   templateUrl: './tech-stack-card.component.html',
   styleUrl: './tech-stack-card.component.scss',
 })
-export class TechStackCardComponent {
+export class TechStackCardComponent extends BreakpointComponent {
   @Input({ required: true }) title: string = '';
   @Input({ required: true }) entries!: IconSource[];
+  protected readonly breakpointEnum = BreakpointEnum;
+
+  constructor() {
+    super();
+  }
 }

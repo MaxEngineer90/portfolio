@@ -1,0 +1,43 @@
+<span
+  [class.font-size-h1-lg]="currentBreakpoint === breakpointEnum.Large"
+  [class.font-size-h1-md]="currentBreakpoint === breakpointEnum.Medium"
+  [class.font-size-h1-sm]="currentBreakpoint === breakpointEnum.Small"
+  [class.font-size-h1-xl]="currentBreakpoint === breakpointEnum.XLarge"
+  [class.font-size-h1-xs]="currentBreakpoint === breakpointEnum.XSmall"
+  class="tech-stack-title"
+>
+  Mein Techstack
+</span>
+<div class="tech-stack-entry-container">
+  <app-tech-stack-card
+    [entries]="backendTechStackEntries"
+    title="Backend"
+  ></app-tech-stack-card>
+
+  <app-tech-stack-card
+    [entries]="frontEndTechStackEntries"
+    title="Frontend"
+  ></app-tech-stack-card>
+
+  <app-tech-stack-card
+    [entries]="devOpsTechStackEntries"
+    title="DevOps"
+  ></app-tech-stack-card>
+</div>
+<div
+  [class.info-mobile]="
+    currentBreakpoint === breakpointEnum.XSmall ||
+    currentBreakpoint === breakpointEnum.Small
+  "
+  class="info"
+>
+  <span
+    [class.font-size-text-lg]="currentBreakpoint === breakpointEnum.Large"
+    [class.font-size-text-md]="currentBreakpoint === breakpointEnum.Medium"
+    [class.font-size-text-sm]="currentBreakpoint === breakpointEnum.Small"
+    [class.font-size-text-xl]="currentBreakpoint === breakpointEnum.XLarge"
+    [class.font-size-text-xs]="currentBreakpoint === breakpointEnum.XSmall"
+  >
+    Darüber hinaus bin ich mit dem Konzept des Prompt Engineerings vertraut
+  </span>
+</div>

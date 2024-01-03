@@ -1,0 +1,16 @@
+@import "../../../../styles/variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  color: $text-color-black-theme;
+
+  img {
+    margin-left: 0.7em;
+    width: 93%;
+  }
+
+  app-greeting {
+    margin-top: 1em;
+  }
+}

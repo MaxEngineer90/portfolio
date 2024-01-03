@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "ASAP Condensed";
-  src: url("assets/fonts/asap-condensed/ASAPCondensed-Regular.ttf")
+  src: url("assets/fonts/asap-condensed/asap-condensed-regular.ttf")
     format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: "ASAP Condensed";
-  src: url("assets/fonts/asap-condensed/ASAPCondensed-Bold.ttf")
+  src: url("assets/fonts/asap-condensed/asap-condensed-bold.ttf")
     format("truetype");
   font-weight: bold;
   font-style: normal;
@@ -21,7 +21,7 @@
 
 @font-face {
   font-family: "ASAP Condensed";
-  src: url("assets/fonts/asap-condensed/ASAPCondensed-Italic.ttf")
+  src: url("assets/fonts/asap-condensed/asap-condensed-italic.ttf")
     format("truetype");
   font-weight: normal;
   font-style: italic;
@@ -83,6 +83,7 @@ $portfolio-theme: mat.define-light-theme(
 );
 
 @import "./styles/variables";
+@import "./styles/theming";
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component

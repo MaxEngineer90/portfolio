@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { TechStackCardComponent } from './tech-stack-card/tech-stack-card.component';
 import { IconSource } from '../../../models/icon-source';
+import { BreakpointComponent } from '../../breakpoint/breakpoint.component';
+import { BreakpointEnum } from '../../../models/breakpoint.enum';
 
 @Component({
   selector: 'app-tech-stack-collection',
@@ -9,7 +11,7 @@ import { IconSource } from '../../../models/icon-source';
   templateUrl: './tech-stack-collection.component.html',
   styleUrl: './tech-stack-collection.component.scss',
 })
-export class TechStackCollectionComponent {
+export class TechStackCollectionComponent extends BreakpointComponent {
   readonly path = 'assets/icons/';
   readonly fileType = '.png';
 
@@ -34,9 +36,16 @@ export class TechStackCollectionComponent {
 
   readonly backendTechStackEntries: IconSource[] = [
     { name: 'Java', icon: `${this.path}java${this.fileType}` },
-    { name: 'Spring Boot', icon: `${this.path}springboot${this.fileType}` },
+    { name: 'Spring Boot', icon: `${this.path}spring-boot${this.fileType}` },
     { name: 'Postgres SQL', icon: `${this.path}postgres${this.fileType}` },
     { name: 'Junit 5', icon: `${this.path}junit5${this.fileType}` },
     { name: 'Mockito', icon: `${this.path}mockito${this.fileType}` },
   ];
+
+  override currentBreakpoint?: BreakpointEnum;
+  breakpointEnum = BreakpointEnum;
+
+  constructor() {
+    super();
+  }
 }

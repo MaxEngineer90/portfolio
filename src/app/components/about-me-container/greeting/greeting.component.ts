@@ -1,7 +1,6 @@
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { BreakpointService } from '../../../services/breakpoint/breakpoint.service';
+import { Component, OnInit } from '@angular/core';
 import { BreakpointEnum } from '../../../models/breakpoint.enum';
+import { BreakpointComponent } from '../../breakpoint/breakpoint.component';
 
 @Component({
   selector: 'app-greeting',
@@ -10,9 +9,9 @@ import { BreakpointEnum } from '../../../models/breakpoint.enum';
   templateUrl: './greeting.component.html',
   styleUrl: './greeting.component.scss',
 })
-export class GreetingComponent implements OnInit, OnDestroy {
+export class GreetingComponent extends BreakpointComponent implements OnInit {
   displayText = '';
-  currentBreakpoint?: BreakpointEnum;
+  override currentBreakpoint?: BreakpointEnum;
   protected readonly breakpointEnum = BreakpointEnum;
   private readonly words: string[] = [
     ' Java, Spring Boot & Angular Enthusiast',
@@ -23,23 +22,12 @@ export class GreetingComponent implements OnInit, OnDestroy {
   private loopNum = 0;
   private typingSpeed = 100;
 
-  private subscription?: Subscription;
-  private readonly breakpointService = inject(BreakpointService);
-
   constructor() {
-    this.subscription = this.breakpointService.activeBreakpoint$.subscribe(
-      (breakpoint) => {
-        this.currentBreakpoint = breakpoint;
-      },
-    );
+    super();
   }
 
   ngOnInit(): void {
     this.typewrite();
-  }
-
-  ngOnDestroy(): void {
-    this.subscription?.unsubscribe();
   }
 
   private typewrite(): void {

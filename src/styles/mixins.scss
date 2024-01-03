@@ -19,3 +19,7 @@
   width: 100%;
   height: 0.5rem;
 }
+
+@mixin custom-font-size($size) {
+  font-size: $size;
+}

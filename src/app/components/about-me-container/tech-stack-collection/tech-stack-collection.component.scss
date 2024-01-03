@@ -1,0 +1,33 @@
+@import "../../../../styles/variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+
+  .tech-stack-title {
+    align-self: center;
+  }
+
+  .info,
+  .tech-stack-entry-container {
+    margin-top: 2em;
+  }
+
+  .tech-stack-entry-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .info-mobile {
+    padding-left: 2em;
+    padding-right: 0.1em;
+    margin-top: 1em;
+  }
+
+  .info {
+    align-self: center;
+  }
+}

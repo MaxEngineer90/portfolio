@@ -1,0 +1,15 @@
+<mat-card class="backend-card">
+  <mat-card-header>
+    <span
+      [class.font-size-text-lg]="currentBreakpoint === breakpointEnum.Large"
+      [class.font-size-text-md]="currentBreakpoint === breakpointEnum.Medium"
+      [class.font-size-text-sm]="currentBreakpoint === breakpointEnum.Small"
+      [class.font-size-text-xl]="currentBreakpoint === breakpointEnum.XLarge"
+      [class.font-size-text-xs]="currentBreakpoint === breakpointEnum.XSmall"
+      >{{ title }}</span
+    >
+  </mat-card-header>
+  <mat-card-content *ngFor="let entry of entries">
+    <app-entry [entry]="entry"></app-entry>
+  </mat-card-content>
+</mat-card>
