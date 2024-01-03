@@ -1,0 +1,15 @@
+.dialog-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+mat-icon-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

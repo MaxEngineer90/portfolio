@@ -1,10 +1,11 @@
 import { Component, inject, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { IconSource } from '../../../models/icon-source';
-import { BreakpointComponent } from '../../breakpoint/breakpoint.component';
-import { BreakpointEnum } from '../../../models/breakpoint.enum';
+
 import { MatDialog } from '@angular/material/dialog';
 import { CertificatDialogComponent } from '../certificat-dialog/certificat-dialog.component';
+import { BreakpointComponent } from '../../../breakpoint/breakpoint.component';
+import { IconSource } from '../../../../models/icon-source';
+import { BreakpointEnum } from '../../../../models/breakpoint.enum';
 
 @Component({
   selector: 'app-certification-card',
@@ -15,7 +16,7 @@ import { CertificatDialogComponent } from '../certificat-dialog/certificat-dialo
 })
 export class CertificationCardComponent extends BreakpointComponent {
   @Input({ required: true }) source!: IconSource;
-
+  @Input({ required: true }) index!: number;
   dialog = inject(MatDialog);
 
   override currentBreakpoint?: BreakpointEnum;
@@ -27,14 +28,14 @@ export class CertificationCardComponent extends BreakpointComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(CertificatDialogComponent, {
-      width: '250px',
+      width: '100%',
+      height: '70%',
       data: {
-        /* data passed to dialog */
+        index: this.index,
+        name: this.source.name,
       },
     });
 
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
-    });
+    dialogRef.afterClosed().subscribe((result) => {});
   }
 }

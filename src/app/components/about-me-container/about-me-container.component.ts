@@ -4,7 +4,7 @@ import { AboutMeMobileComponent } from './about-me-mobile/about-me-mobile.compon
 import { NgIf } from '@angular/common';
 import { AboutMeExpandedComponent } from './about-me-expanded/about-me-expanded.component';
 import { BreakpointComponent } from '../breakpoint/breakpoint.component';
-import { CertificateComponent } from '../certificate/certificate.component';
+import { CertificateComponent } from './certificate/certificate.component';
 
 @Component({
   selector: 'app-about-me-container',

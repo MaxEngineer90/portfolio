@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { CertificationCardComponent } from './certification-card/certification-card.component';
 import { NgForOf } from '@angular/common';
-import { IconSource } from '../../models/icon-source';
+
 import { MatListModule } from '@angular/material/list';
-import { BreakpointComponent } from '../breakpoint/breakpoint.component';
-import { BreakpointEnum } from '../../models/breakpoint.enum';
+
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { BreakpointComponent } from '../../breakpoint/breakpoint.component';
+import { BreakpointEnum } from '../../../models/breakpoint.enum';
+import { IconSource } from '../../../models/icon-source';
 
 @Component({
   selector: 'app-certificate',

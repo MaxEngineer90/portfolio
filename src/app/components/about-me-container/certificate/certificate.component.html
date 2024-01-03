@@ -7,5 +7,9 @@
   "
   class="certification-container"
 >
-  <app-certification-card *ngFor="let source of sources" [source]="source" />
+  <app-certification-card
+    *ngFor="let source of sources; let index = index"
+    [index]="index"
+    [source]="source"
+  />
 </div>
