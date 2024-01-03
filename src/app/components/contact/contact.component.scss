@@ -1,6 +1,14 @@
-@import "../../../styles/mixins";
+.contact-form-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
 
-.divider {
-  @include divider;
-  margin-bottom: 1rem;
+.contact-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contact-form textarea {
+  min-height: 100px;
 }
