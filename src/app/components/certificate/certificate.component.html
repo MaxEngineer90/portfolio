@@ -1,5 +1,11 @@
 <span class="title">Zertifikate</span>
 
-<div class="certification-container">
+<div
+  [class.certification-sm]="
+    currentBreakpoint === breakpointEnum.XSmall ||
+    currentBreakpoint === breakpointEnum.Small
+  "
+  class="certification-container"
+>
   <app-certification-card *ngFor="let source of sources" [source]="source" />
 </div>

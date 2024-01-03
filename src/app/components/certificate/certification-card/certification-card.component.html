@@ -2,5 +2,14 @@
   <mat-card-header>
     <img src="{{ source.icon }}" />
   </mat-card-header>
-  <mat-card-subtitle>{{ source.name }}</mat-card-subtitle>
+  <mat-card-subtitle>
+    <span
+      [class.font-size-text-lg]="currentBreakpoint === breakpointEnum.Large"
+      [class.font-size-text-md]="currentBreakpoint === breakpointEnum.Medium"
+      [class.font-size-text-sm]="currentBreakpoint === breakpointEnum.Small"
+      [class.font-size-text-xl]="currentBreakpoint === breakpointEnum.XLarge"
+      [class.font-size-text-xs]="currentBreakpoint === breakpointEnum.XSmall"
+      >{{ source.name }}</span
+    >
+  </mat-card-subtitle>
 </mat-card>
