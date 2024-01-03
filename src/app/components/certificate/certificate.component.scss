@@ -26,5 +26,10 @@
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
+    margin-top: 1.5em;
+  }
+
+  .certification-container :hover {
+    cursor: pointer;
   }
 }

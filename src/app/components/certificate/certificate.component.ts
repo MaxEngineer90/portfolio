@@ -5,11 +5,17 @@ import { IconSource } from '../../models/icon-source';
 import { MatListModule } from '@angular/material/list';
 import { BreakpointComponent } from '../breakpoint/breakpoint.component';
 import { BreakpointEnum } from '../../models/breakpoint.enum';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-certificate',
   standalone: true,
-  imports: [CertificationCardComponent, NgForOf, MatListModule],
+  imports: [
+    CertificationCardComponent,
+    NgForOf,
+    MatListModule,
+    MatTooltipModule,
+  ],
   templateUrl: './certificate.component.html',
   styleUrl: './certificate.component.scss',
 })
