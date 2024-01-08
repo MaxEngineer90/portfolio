@@ -1,25 +1,55 @@
 <mat-toolbar>
   <div class="bookmarks">
     <span
-      [class.font-size-h2-lg]="currentBreakpoint === breakpointEnum.Large"
-      [class.font-size-h2-md]="currentBreakpoint === breakpointEnum.Medium"
-      [class.font-size-h2-sm]="currentBreakpoint === breakpointEnum.Small"
-      [class.font-size-h2-xl]="currentBreakpoint === breakpointEnum.XLarge"
-      [class.font-size-h2-xs]="currentBreakpoint === breakpointEnum.XSmall"
-      routerLink="/about-me"
+      [class.font-size-text-lg]="currentBreakpoint === breakpointEnum.Large"
+      [class.font-size-text-md]="currentBreakpoint === breakpointEnum.Medium"
+      [class.font-size-text-sm]="currentBreakpoint === breakpointEnum.Small"
+      [class.font-size-text-xl]="currentBreakpoint === breakpointEnum.XLarge"
+      [class.font-size-text-xs]="currentBreakpoint === breakpointEnum.XSmall"
+      routerLink="/home"
+      routerLinkActive="active"
+      >home</span
+    >
+    <span
+      [class.font-size-text-lg]="currentBreakpoint === breakpointEnum.Large"
+      [class.font-size-text-md]="currentBreakpoint === breakpointEnum.Medium"
+      [class.font-size-text-sm]="currentBreakpoint === breakpointEnum.Small"
+      [class.font-size-text-xl]="currentBreakpoint === breakpointEnum.XLarge"
+      [class.font-size-text-xs]="currentBreakpoint === breakpointEnum.XSmall"
+      routerLink="/about"
       routerLinkActive="active"
       >about</span
     >
+    <span
+      [class.font-size-text-lg]="currentBreakpoint === breakpointEnum.Large"
+      [class.font-size-text-md]="currentBreakpoint === breakpointEnum.Medium"
+      [class.font-size-text-sm]="currentBreakpoint === breakpointEnum.Small"
+      [class.font-size-text-xl]="currentBreakpoint === breakpointEnum.XLarge"
+      [class.font-size-text-xs]="currentBreakpoint === breakpointEnum.XSmall"
+      routerLink="/contact"
+      routerLinkActive="active"
+      >contact</span
+    >
+  </div>
+
+  <div class="name">
     <span
       [class.font-size-h2-lg]="currentBreakpoint === breakpointEnum.Large"
       [class.font-size-h2-md]="currentBreakpoint === breakpointEnum.Medium"
       [class.font-size-h2-sm]="currentBreakpoint === breakpointEnum.Small"
       [class.font-size-h2-xl]="currentBreakpoint === breakpointEnum.XLarge"
       [class.font-size-h2-xs]="currentBreakpoint === breakpointEnum.XSmall"
-      routerLink="/contact"
-      routerLinkActive="active"
-      >contact</span
+      >Maximimilian Lamm</span
     >
+  </div>
+
+  <div class="social-container">
+    <a href="https://www.linkedin.com/feed/"
+      ><img alt="linkedin icon" src="assets/icons/linkedIn.png"
+    /></a>
+    <a href="https://github.com/MaxEngineer90"
+      ><img alt="github icon" src="assets/icons/github-mark-white.png"
+    /></a>
   </div>
 </mat-toolbar>
 <div class="divider"></div>

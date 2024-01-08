@@ -4,31 +4,21 @@
 // Plus imports for other components in your app.
 
 @font-face {
-  font-family: "ASAP Condensed";
-  src: url("assets/fonts/asap-condensed/asap-condensed-regular.ttf")
-    format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ASAP Condensed";
-  src: url("assets/fonts/asap-condensed/asap-condensed-bold.ttf")
-    format("truetype");
+  font-family: Tektur;
+  src: url("assets/fonts/tektur/Tektur-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "ASAP Condensed";
-  src: url("assets/fonts/asap-condensed/asap-condensed-italic.ttf")
-    format("truetype");
+  font-family: "Tektur";
+  src: url("assets/fonts/tektur/Tektur-Regular.ttf") format("truetype");
   font-weight: normal;
-  font-style: italic;
+  font-style: normal;
 }
 
 $custom-typography: mat.define-typography-config(
-  $font-family: "ASAP Condensed",
+  $font-family: "Tektur",
   $headline-1:
     mat.define-typography-level(
       $font-size: 24px,
@@ -99,6 +89,6 @@ body {
 
 body {
   margin: 0;
-  font-family: "ASAP Condensed", sans-serif;
+  font-family: "Tektur", sans-serif;
   background-color: $background-color-black-theme;
 }

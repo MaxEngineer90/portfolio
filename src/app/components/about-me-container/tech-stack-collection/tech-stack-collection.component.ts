@@ -42,6 +42,14 @@ export class TechStackCollectionComponent extends BreakpointComponent {
     { name: 'Mockito', icon: `${this.path}mockito${this.fileType}` },
   ];
 
+  readonly somethingTechStackEntries: IconSource[] = [
+    { name: 'IntelliJ ide', icon: `${this.path}intellij${this.fileType}` },
+    { name: 'git', icon: `${this.path}git${this.fileType}` },
+    { name: 'Chat GPT', icon: `${this.path}chatgpt.jpg` },
+    { name: 'Jira', icon: `${this.path}jira${this.fileType}` },
+    { name: 'Confluence', icon: `${this.path}confluence${this.fileType}` },
+  ];
+
   override currentBreakpoint?: BreakpointEnum;
   breakpointEnum = BreakpointEnum;
 

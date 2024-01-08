@@ -1,3 +1,4 @@
+<!--
 <div
   [class.greeting-sm]="currentBreakpoint === breakpointEnum.Small"
   [class.greeting-xs]="currentBreakpoint === breakpointEnum.XSmall"
@@ -11,15 +12,6 @@
     [class.font-size-h1-xs]="currentBreakpoint === breakpointEnum.XSmall"
     >Hey, ich bin Maximilian Lamm</span
   >
-
-  <span
-    [class.font-size-h2-lg]="currentBreakpoint === breakpointEnum.Large"
-    [class.font-size-h2-md]="currentBreakpoint === breakpointEnum.Medium"
-    [class.font-size-h2-sm]="currentBreakpoint === breakpointEnum.Small"
-    [class.font-size-h2-xl]="currentBreakpoint === breakpointEnum.XLarge"
-    [class.font-size-h2-xs]="currentBreakpoint === breakpointEnum.XSmall"
-    >Und ein {{ displayText }}</span
-  >
 </div>
 
 <div class="history-social-container">
@@ -31,8 +23,7 @@
       [class.font-size-text-xl]="currentBreakpoint === breakpointEnum.XLarge"
       [class.font-size-text-xs]="currentBreakpoint === breakpointEnum.XSmall"
     >
-      Im Jahr 2019 schloss ich erfolgreich meine Umschulung zum Fachinformatiker
-      für Anwendungsentwicklung ab.
+     Meine Karriere als Softwareentwicker begann im Jahr 2019 nach abschluss meiner Umschulung zum Fachinformatiker ( Anwendungsentwickler )
     </span>
     <span
       [class.font-size-text-lg]="currentBreakpoint === breakpointEnum.Large"
@@ -45,19 +36,34 @@
       zu vertiefen.
     </span>
   </div>
-
-  <div
-    [class.social-container-sm]="
-      currentBreakpoint === breakpointEnum.XSmall ||
-      currentBreakpoint === breakpointEnum.Small
-    "
-    class="social-container"
-  >
-    <a href="https://www.linkedin.com/feed/"
-      ><img alt="linkedin icon" src="assets/icons/linkedIn.png"
-    /></a>
-    <a href="https://github.com/MaxEngineer90"
-      ><img alt="github icon" src="assets/icons/github-mark-white.png"
-    /></a>
-  </div>
 </div>
+-->
+<span
+  [class.font-size-text-lg]="currentBreakpoint === breakpointEnum.Large"
+  [class.font-size-text-md]="currentBreakpoint === breakpointEnum.Medium"
+  [class.font-size-text-sm]="currentBreakpoint === breakpointEnum.Small"
+  [class.font-size-text-xl]="currentBreakpoint === breakpointEnum.XLarge"
+  [class.font-size-text-xs]="currentBreakpoint === breakpointEnum.XSmall"
+>
+  Mein beruflicher Weg führte mich von der Gastronomie zur IT.
+</span>
+<span
+  [class.font-size-text-lg]="currentBreakpoint === breakpointEnum.Large"
+  [class.font-size-text-md]="currentBreakpoint === breakpointEnum.Medium"
+  [class.font-size-text-sm]="currentBreakpoint === breakpointEnum.Small"
+  [class.font-size-text-xl]="currentBreakpoint === breakpointEnum.XLarge"
+  [class.font-size-text-xs]="currentBreakpoint === breakpointEnum.XSmall"
+>
+  Nach einer erfolgreichen Umschulung zum Fachinformatiker im Jahr 2019 habe ich
+  die Welt der Anwendungsentwicklung für mich entdeckt.
+</span>
+<span
+  [class.font-size-text-lg]="currentBreakpoint === breakpointEnum.Large"
+  [class.font-size-text-md]="currentBreakpoint === breakpointEnum.Medium"
+  [class.font-size-text-sm]="currentBreakpoint === breakpointEnum.Small"
+  [class.font-size-text-xl]="currentBreakpoint === breakpointEnum.XLarge"
+  [class.font-size-text-xs]="currentBreakpoint === breakpointEnum.XSmall"
+>
+  Hier vereine ich meine Leidenschaft für Technik mit meiner langjährigen
+  Berufserfahrung, um qualitativ hochwertige Softwarelösungen zu entwickeln.
+</span>

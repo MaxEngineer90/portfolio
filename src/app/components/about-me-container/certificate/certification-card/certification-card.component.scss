@@ -16,3 +16,8 @@ mat-card {
     width: 100%;
   }
 }
+
+mat-card:hover {
+  animation-name: shrink;
+  animation-duration: 2s;
+}
