@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { BreakpointComponent } from '../../../utils/breakpoint/breakpoint.component';
 import { IconEntry } from '../../../../models/icon-entry';
 
 @Component({
@@ -9,10 +8,6 @@ import { IconEntry } from '../../../../models/icon-entry';
   templateUrl: './skill-entry.component.html',
   styleUrl: './skill-entry.component.scss',
 })
-export class SkillEntryComponent extends BreakpointComponent {
+export class SkillEntryComponent {
   @Input({ required: true }) entry!: IconEntry;
-
-  constructor() {
-    super();
-  }
 }

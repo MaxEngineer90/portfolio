@@ -24,6 +24,13 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: "ASAP Condensed Extra Light";
+  src: url("assets/fonts/asap-condensed/asap-condensed-extra-light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
 $custom-typography: mat.define-typography-config(
   $font-family: "ASAP Condensed",
   $headline-1: mat.define-typography-level(
