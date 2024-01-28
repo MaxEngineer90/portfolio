@@ -1,0 +1,28 @@
+@import "../../../../styles/mixins";
+
+mat-card {
+  @include mat-card-style;
+  height: 270px;
+  width: 180px;
+
+  mat-card-header,
+  mat-card-content {
+    align-self: center;
+  }
+
+  mat-card-header {
+    font-size: 1.4rem;
+  }
+
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+
+    app-skill-entry {
+      display: flex;
+      margin-top: 18px;
+      gap: 5px;
+    }
+  }
+}

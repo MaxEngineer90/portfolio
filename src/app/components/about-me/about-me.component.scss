@@ -1,0 +1,33 @@
+@import "../../../styles/mixins";
+
+.desktop {
+  @include mat-card-style;
+  height: 300px;
+  width: auto;
+
+  color: $text-color-black-theme;
+
+  mat-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    #greeting {
+      letter-spacing: .1em;
+    }
+
+    #name {
+      color: $text-color-hover-black-theme;
+    }
+  }
+
+  mat-card-content {
+    padding-right: 2.5em;
+    padding-top: 3em;
+  }
+
+}
+
+app-skill-collection {
+  margin-top: 3em;
+}

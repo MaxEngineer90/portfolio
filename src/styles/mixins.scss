@@ -1,12 +1,9 @@
 @import "./variables";
 
 @mixin mat-card-style {
-  height: 270px;
-  width: 180px;
   box-sizing: border-box;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease,
+  box-shadow 0.3s ease;
   border-radius: 8px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 1);
   background-color: $background-color-black-theme;

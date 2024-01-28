@@ -1,0 +1,18 @@
+<ng-container *ngIf="currentBreakpoint === breakpointEnum.Large || currentBreakpoint === breakpointEnum.Medium">
+
+  <mat-card [class.desktop]="currentBreakpoint === breakpointEnum.Large">
+    <mat-card-header>
+      <span id="greeting" [class.font-size-h1-lg]="currentBreakpoint === breakpointEnum.Large">Hey, ich bin</span>
+      <span id="name" [class.font-size-h1-lg]="currentBreakpoint === breakpointEnum.Large">Maximilian!</span>
+    </mat-card-header>
+    <mat-card-content>
+      <span [class.font-size-text-lg]="currentBreakpoint === breakpointEnum.Large">
+        Meine Leidenschaft für die Softwareentwicklung spiegelt sich in meiner täglichen Arbeit wieder.
+        Seit meiner Umschulung zum Fachinformatiker, bin ich als Fullstackentwickler tätig, Java, Spring Angular und natürlich SQL sind Werkzeuge mit denen ich fast täglich zu tun habe.
+      </span>
+    </mat-card-content>
+  </mat-card>
+
+  <app-skill-collection/>
+</ng-container>
+

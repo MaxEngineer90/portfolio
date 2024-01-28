@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  padding: 2em 16em;
+
+  .content-container {
+    display: flex;
+    gap: 2em;
+  }
+}

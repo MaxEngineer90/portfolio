@@ -1,0 +1,47 @@
+<span
+  [class.font-size-h1-lg]="currentBreakpoint === breakpointEnum.Large"
+  [class.font-size-h1-md]="currentBreakpoint === breakpointEnum.Medium"
+  [class.font-size-h1-sm]="currentBreakpoint === breakpointEnum.Small"
+  [class.font-size-h1-xl]="currentBreakpoint === breakpointEnum.XLarge"
+  [class.font-size-h1-xs]="currentBreakpoint === breakpointEnum.XSmall"
+  class="tech-stack-title"
+>
+  Skills
+</span>
+<div class="tech-stack-entry-container">
+  <app-skill-card
+    [entries]="backendTechStackEntries"
+    title="Backend"
+  ></app-skill-card>
+
+  <app-skill-card
+    [entries]="frontEndTechStackEntries"
+    title="Frontend"
+  ></app-skill-card>
+
+  <app-skill-card
+    [entries]="devOpsTechStackEntries"
+    title="GitOps"
+  ></app-skill-card>
+
+  <app-skill-card
+    [entries]="somethingTechStackEntries"
+    title="Sonstiges"
+  ></app-skill-card>
+</div>
+<div
+  [class.info-mobile]="
+    currentBreakpoint === breakpointEnum.XSmall ||
+    currentBreakpoint === breakpointEnum.Small
+  "
+  class="info"
+>
+  <span
+    [class.font-size-text-lg]="currentBreakpoint === breakpointEnum.Large"
+    [class.font-size-text-md]="currentBreakpoint === breakpointEnum.Medium"
+    [class.font-size-text-sm]="currentBreakpoint === breakpointEnum.Small"
+    [class.font-size-text-xl]="currentBreakpoint === breakpointEnum.XLarge"
+    [class.font-size-text-xs]="currentBreakpoint === breakpointEnum.XSmall"
+  >
+  </span>
+</div>

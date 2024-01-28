@@ -1,0 +1,22 @@
+@import "../../../styles/variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  color: $text-color-black-theme;
+
+
+  .tech-stack-title {
+    align-self: center;
+  }
+
+  .info,
+  .tech-stack-entry-container {
+    margin-top: 2em;
+  }
+
+  .tech-stack-entry-container {
+    display: flex;
+    gap: 2em
+  }
+}

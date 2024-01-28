@@ -1,0 +1,11 @@
+@import "../../../styles/mixins";
+
+mat-card {
+  @include mat-card-style;
+
+  img {
+    height: 632px;
+    width: 400px;
+    padding: 1em;
+  }
+}
