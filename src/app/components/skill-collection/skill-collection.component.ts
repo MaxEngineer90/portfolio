@@ -50,7 +50,7 @@ export class SkillCollectionComponent extends BreakpointComponent {
   ];
 
   readonly somethingTechStackEntries: IconEntry[] = [
-    { name: 'IntelliJ ide', icon: `${this.path}intellij${this.fileType}` },
+    { name: 'IntelliJ IDEA', icon: `${this.path}intellij${this.fileType}` },
     { name: 'Git', icon: `${this.path}git${this.fileType}` },
     { name: 'Chat GPT', icon: `${this.path}chatgpt.jpg` },
     { name: 'Atlassian', icon: `${this.path}atlassian${this.fileType}` },

@@ -1,23 +1,28 @@
 @import "../../../styles/mixins";
 
-mat-card {
-  @include mat-card-style;
-  width: 100%;
+:host {
+  display: block;
+  margin-top: 2em;
 
-  mat-card-header {
-    color: white;
-  }
+  mat-card {
+    @include mat-card-style;
+    width: 100%;
 
-  form {
-    padding: 2em;
-
-    .contact-form-field {
-      width: 100%;
-      margin-bottom: 15px;
+    mat-card-header {
+      color: white;
     }
 
-    .contact-form textarea {
-      min-height: 100px;
+    form {
+      padding: 2em;
+
+      .contact-form-field {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .contact-form textarea {
+        min-height: 100px;
+      }
     }
   }
 }
