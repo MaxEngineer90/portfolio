@@ -39,7 +39,6 @@ export class SkillCollectionComponent extends BreakpointComponent {
       icon: `${this.path}docker${this.fileType}`,
     },
     { name: 'Kubernetes', icon: `${this.path}kubernetes${this.fileType}` },
-    { name: 'Keycloak', icon: `${this.path}keyclaok${this.fileType}` },
   ];
 
   readonly backendTechStackEntries: IconEntry[] = [
@@ -55,5 +54,6 @@ export class SkillCollectionComponent extends BreakpointComponent {
     { name: 'Git', icon: `${this.path}git${this.fileType}` },
     { name: 'Chat GPT', icon: `${this.path}chatgpt.jpg` },
     { name: 'Atlassian', icon: `${this.path}atlassian${this.fileType}` },
+    { name: 'Keycloak', icon: `${this.path}keyclaok${this.fileType}` },
   ];
 }

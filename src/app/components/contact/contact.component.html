@@ -1,0 +1,54 @@
+<mat-card>
+  <mat-card-header><span
+    [class.font-size-h2-lg]="currentBreakpoint === breakpointEnum.Large">Kontakt</span>
+  </mat-card-header>
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" class="contact-form">
+    <!-- Name Field -->
+    <mat-form-field appearance="fill" class="contact-form-field">
+      <mat-label>Name</mat-label>
+      <input formControlName="name" matInput/>
+      <mat-error *ngIf="contactForm.get('name')?.hasError('required')">
+        Name is required
+      </mat-error>
+      <mat-error *ngIf="contactForm.get('name')?.hasError('minlength')">
+        Name must be at least 3 characters
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Email Field -->
+    <mat-form-field appearance="fill" class="contact-form-field">
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput type="email"/>
+      <mat-error *ngIf="contactForm.get('email')?.hasError('required')">
+        Email is required
+      </mat-error>
+      <mat-error *ngIf="contactForm.get('email')?.hasError('email')">
+        Enter a valid email
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Message Field -->
+    <mat-form-field appearance="fill" class="contact-form-field">
+      <mat-label>Message</mat-label>
+      <textarea formControlName="message" matInput></textarea>
+      <mat-error *ngIf="contactForm.get('message')?.hasError('required')">
+        Message is required
+      </mat-error>
+      <mat-error *ngIf="contactForm.get('message')?.hasError('minlength')">
+        Message must be at least 15 characters
+      </mat-error>
+    </mat-form-field>
+
+    <button
+      [disabled]="!contactForm.valid"
+      color="primary"
+      mat-raised-button
+      type="submit"
+    >
+      Send
+    </button>
+  </form>
+
+
+</mat-card>
