@@ -1,11 +1,23 @@
 @import "../../../styles/mixins";
 
-mat-card {
+.Large {
   @include mat-card-style;
 
   img {
     height: 552px;
     width: 310px;
     padding: 1em;
+  }
+}
+
+.XSmall {
+  @include mat-card-style;
+  width: 100%;
+
+  img {
+
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+
   }
 }

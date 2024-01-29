@@ -1,7 +1,19 @@
-<mat-card>
-  <img
-    alt="bild von einem softwareentwickler"
-    src="assets/images/max-placeholder.png"
-  />
+<ng-container *ngIf="currentBreakpoint === breakpointEnum.Large || currentBreakpoint === breakpointEnum.Medium">
+  <mat-card [class.Large]="currentBreakpoint === breakpointEnum.Large">
+    <img
+      alt="bild von einem softwareentwickler"
+      src="assets/images/ich.png"
+    />
 
-</mat-card>
+  </mat-card>
+</ng-container>
+
+<ng-container *ngIf="currentBreakpoint === breakpointEnum.XSmall">
+  <mat-card [class.XSmall]="currentBreakpoint === breakpointEnum.XSmall">
+    <img
+      alt="bild von einem softwareentwickler"
+      src="assets/images/ich.png"
+    />
+
+  </mat-card>
+</ng-container>

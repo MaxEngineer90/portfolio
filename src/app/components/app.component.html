@@ -1,5 +1,22 @@
-<div class="content-container">
-  <app-about-me></app-about-me>
-  <app-image-card></app-image-card>
+<div *ngIf="currentBreakpoint === breakpointEnum.Large || currentBreakpoint === breakpointEnum.Medium"
+     [class.desktop-view]="currentBreakpoint === breakpointEnum.Large || currentBreakpoint === breakpointEnum.Medium"
+>
+  <div
+    [class.content-container-desktop]="currentBreakpoint === breakpointEnum.Large">
+    <app-about-me></app-about-me>
+    <app-image-card></app-image-card>
+  </div>
+  <app-contact></app-contact>
 </div>
-<app-contact></app-contact>
+
+<div *ngIf="currentBreakpoint === breakpointEnum.XSmall"
+     [class.XSmall-view]="currentBreakpoint===breakpointEnum.XSmall">
+  <div
+    [class.content-container-mobile]="currentBreakpoint === breakpointEnum.XSmall">
+    <app-image-card></app-image-card>
+    <app-about-me></app-about-me>
+
+  </div>
+  <app-contact></app-contact>
+</div>
+

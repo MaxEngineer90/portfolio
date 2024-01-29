@@ -1,9 +1,14 @@
-:host {
+.desktop-view {
   display: block;
   padding: 2em 16em;
 
-  .content-container {
+  .content-container-desktop {
     display: flex;
     gap: 2em;
   }
+}
+
+.XSmall-view {
+  display: flex;
+  flex-direction: column;
 }

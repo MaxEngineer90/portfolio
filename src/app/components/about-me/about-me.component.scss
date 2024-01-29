@@ -1,6 +1,6 @@
 @import "../../../styles/mixins";
 
-.desktop {
+.Large {
   @include mat-card-style;
   height: 240px;
   width: 810px;
@@ -27,6 +27,34 @@
   }
 
 }
+
+.XSmall {
+  @include mat-card-style;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+  width: 100%;
+
+  mat-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    #greeting-xs {
+      letter-spacing: .1em;
+    }
+
+    #name-xs {
+      color: $text-color-hover-black-theme;
+    }
+  }
+
+  mat-card-content {
+    padding-right: 2.5em;
+    padding-top: 3em;
+  }
+
+}
+
 
 app-skill-collection {
   margin-top: 3em;

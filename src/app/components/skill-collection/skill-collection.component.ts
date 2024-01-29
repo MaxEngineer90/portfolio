@@ -39,6 +39,7 @@ export class SkillCollectionComponent extends BreakpointComponent {
       icon: `${this.path}docker${this.fileType}`,
     },
     { name: 'Kubernetes', icon: `${this.path}kubernetes${this.fileType}` },
+    { name: 'Argo CD', icon: `${this.path}argo_cd${this.fileType}` },
   ];
 
   readonly backendTechStackEntries: IconEntry[] = [
